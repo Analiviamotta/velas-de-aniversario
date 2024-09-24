@@ -7,8 +7,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class Ex5Test {
 
     @Test
-    @DisplayName("shold the number of candles can blow out is zero")
-    void sholdTheNumberOfCandlesCanBlowOutIsZero(){
+    @DisplayName("should the number of candles can blow out is zero")
+    void shouldTheNumberOfCandlesCanBlowOutIsZero(){
         Ex05 ex05 = new Ex05();
         int[] candles = {0};
 

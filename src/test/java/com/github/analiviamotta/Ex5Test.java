@@ -3,6 +3,7 @@ package com.github.analiviamotta;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class Ex5Test {
 
@@ -23,6 +24,18 @@ public class Ex5Test {
 
         assertThat(ex05.computeNumberOfBlowoutCandles(6, candles)).isEqualTo(3);
     }
+
+    @Test
+    @DisplayName("should throw exception when age is negative")
+    void shouldThrowExceptionWhenAgeIsNegative(){
+        Ex05 ex05 = new Ex05();
+        int[] candles = {};
+
+        assertThrows(IllegalArgumentException.class, () ->
+                ex05.computeNumberOfBlowoutCandles(-1, candles));
+    }
+
+
 
 
 }

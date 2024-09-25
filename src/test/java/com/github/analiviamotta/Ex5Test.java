@@ -35,6 +35,16 @@ public class Ex5Test {
                 ex05.computeNumberOfBlowoutCandles(-1, candles));
     }
 
+    @Test
+    @DisplayName("should throw exception when candle size is negative")
+    void shouldThrowExceptionWhenCandleSizeIsNegative(){
+        Ex05 ex05 = new Ex05();
+        int[] candles = {1, 2, 3, -4};
+
+        assertThrows(IllegalArgumentException.class, () ->
+                ex05.computeNumberOfBlowoutCandles(4, candles));
+    }
+
 
 
 

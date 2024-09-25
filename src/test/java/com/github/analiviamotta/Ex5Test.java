@@ -54,6 +54,16 @@ public class Ex5Test {
         assertThat(ex05.computeNumberOfBlowoutCandles(1, candles)).isEqualTo(1);
     }
 
+    @Test
+    @DisplayName("when the size of the candles be the same")
+    void whenTheSizeOfTheCandlesBeTheSame(){
+        Ex05 ex05 = new Ex05();
+        int[] candles = {7,7,7,7,7};
+
+        assertThat(ex05.computeNumberOfBlowoutCandles(5, candles)).isEqualTo(5);
+    }
+
+
 
 
 }

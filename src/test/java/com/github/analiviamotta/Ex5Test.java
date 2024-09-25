@@ -45,6 +45,14 @@ public class Ex5Test {
                 ex05.computeNumberOfBlowoutCandles(4, candles));
     }
 
+    @Test
+    @DisplayName("should the number of candles can blow out is one")
+    void shouldTheNumberOfCandlesCanBlowOutIsOne(){
+        Ex05 ex05 = new Ex05();
+        int[] candles = {2};
+
+        assertThat(ex05.computeNumberOfBlowoutCandles(1, candles)).isEqualTo(1);
+    }
 
 
 
